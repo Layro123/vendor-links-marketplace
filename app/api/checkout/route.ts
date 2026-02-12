@@ -58,8 +58,9 @@ export async function POST(request: Request) {
   } catch (error) {
     console.error('Checkout error:', error);
     const message = error instanceof Error ? error.message : 'Failed to create checkout session';
+    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'NOT_SET';
     return NextResponse.json(
-      { error: message },
+      { error: message, debug_base_url: baseUrl },
       { status: 500 }
     );
   }
