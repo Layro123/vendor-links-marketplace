@@ -13,7 +13,9 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: 'Server configuration error' }, { status: 500 });
   }
 
-  const stripe = new Stripe(stripeSecretKey);
+  const stripe = new Stripe(stripeSecretKey.trim(), {
+    apiVersion: '2025-04-30.basil',
+  });
   const resend = new Resend(resendApiKey);
 
   const body = await request.text();

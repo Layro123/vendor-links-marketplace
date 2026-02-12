@@ -12,7 +12,9 @@ export async function POST(request: Request) {
       );
     }
 
-    const stripe = new Stripe(stripeSecretKey);
+    const stripe = new Stripe(stripeSecretKey.trim(), {
+      apiVersion: '2025-04-30.basil',
+    });
 
     const { productIds } = await request.json();
 
