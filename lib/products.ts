@@ -23,7 +23,7 @@ export const products: Product[] = [
     price: 2499,
     originalPrice: 5000,
     stripePriceId: 'price_REPLACE_WITH_STRIPE_PRICE_ID',
-    img: 'https://ecomfed.com/cdn/shop/files/866A529B-8795-4E6C-AC9D-0490A194CE64.webp?v=1763604152',
+    img: '/all-vendors-bundle.png',
     digitalContent: {
       title: 'All Vendors Bundle - Complete Access',
       contacts: [
@@ -40,7 +40,7 @@ export const products: Product[] = [
     price: 999,
     originalPrice: 1999,
     stripePriceId: 'price_REPLACE_WITH_STRIPE_PRICE_ID',
-    img: 'https://ecomfed.com/cdn/shop/files/B554F2B7-8C73-4547-8DAC-BF8BA2708D66.webp?v=1763604470',
+    img: '/cologne.png',
     digitalContent: {
       title: 'Cologne Vendor Contacts',
       contacts: [
@@ -56,7 +56,7 @@ export const products: Product[] = [
     price: 1499,
     originalPrice: 3000,
     stripePriceId: 'price_REPLACE_WITH_STRIPE_PRICE_ID',
-    img: 'https://ecomfed.com/cdn/shop/files/674E8F3C-AD94-4D09-98C8-02F093EA90DA.webp?v=1763606008',
+    img: '/designer-bags.png',
     digitalContent: {
       title: 'Designer Bag Supplier Contacts',
       contacts: [
@@ -72,7 +72,7 @@ export const products: Product[] = [
     price: 1499,
     originalPrice: 3000,
     stripePriceId: 'price_REPLACE_WITH_STRIPE_PRICE_ID',
-    img: 'https://ecomfed.com/cdn/shop/files/94C99A97-1466-4F7F-BAC6-3EA500932C30.webp?v=1763604582',
+    img: '/earphones.png',
     digitalContent: {
       title: 'Earphone Vendor Contacts',
       contacts: [
@@ -88,7 +88,7 @@ export const products: Product[] = [
     price: 1499,
     originalPrice: 3000,
     stripePriceId: 'price_REPLACE_WITH_STRIPE_PRICE_ID',
-    img: 'https://ecomfed.com/cdn/shop/files/64F69AB2-ADD2-4133-B092-4744860733AF.webp?v=1763605779',
+    img: '/phone.png',
     digitalContent: {
       title: 'Phone Vendor Contacts',
       contacts: [
@@ -104,7 +104,7 @@ export const products: Product[] = [
     price: 1499,
     originalPrice: 3000,
     stripePriceId: 'price_REPLACE_WITH_STRIPE_PRICE_ID',
-    img: 'https://ecomfed.com/cdn/shop/files/2A5E42A2-B318-4554-8DB5-CEBB995AD625.webp?v=1763604804',
+    img: '/sneakers.png',
     digitalContent: {
       title: 'Sneaker Vendor Contacts',
       contacts: [
