@@ -40,7 +40,7 @@ export async function POST(request: Request) {
       });
     }
 
-    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
+    const baseUrl = (process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000').trim();
 
     const session = await stripe.checkout.sessions.create({
       payment_method_types: ['card'],
@@ -58,9 +58,8 @@ export async function POST(request: Request) {
   } catch (error) {
     console.error('Checkout error:', error);
     const message = error instanceof Error ? error.message : 'Failed to create checkout session';
-    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'NOT_SET';
     return NextResponse.json(
-      { error: message, debug_base_url: baseUrl },
+      { error: message },
       { status: 500 }
     );
   }
