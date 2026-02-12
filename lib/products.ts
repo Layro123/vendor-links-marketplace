@@ -22,7 +22,7 @@ export const products: Product[] = [
     name: '-ALL VENDORS BUNDLE',
     price: 2499,
     originalPrice: 5000,
-    stripePriceId: 'price_REPLACE_WITH_STRIPE_PRICE_ID',
+    stripePriceId: 'price_1SzuXaD9nz8MARc2PX9BZ3Dh',
     img: '/all-vendors-bundle.png',
     digitalContent: {
       title: 'All Vendors Bundle - Complete Access',
@@ -39,7 +39,7 @@ export const products: Product[] = [
     name: '.COLOGNE VENDOR',
     price: 999,
     originalPrice: 1999,
-    stripePriceId: 'price_REPLACE_WITH_STRIPE_PRICE_ID',
+    stripePriceId: 'price_1SzuXkD9nz8MARc2ajhfQrpU',
     img: '/cologne.png',
     digitalContent: {
       title: 'Cologne Vendor Contacts',
@@ -55,7 +55,7 @@ export const products: Product[] = [
     name: 'DESIGNER BAG SUPPLIER',
     price: 1499,
     originalPrice: 3000,
-    stripePriceId: 'price_REPLACE_WITH_STRIPE_PRICE_ID',
+    stripePriceId: 'price_1SzuXvD9nz8MARc27ffnrkOD',
     img: '/designer-bags.png',
     digitalContent: {
       title: 'Designer Bag Supplier Contacts',
@@ -71,7 +71,7 @@ export const products: Product[] = [
     name: 'Earphone Vendor',
     price: 1499,
     originalPrice: 3000,
-    stripePriceId: 'price_REPLACE_WITH_STRIPE_PRICE_ID',
+    stripePriceId: 'price_1SzuY9D9nz8MARc2jtYOJHM0',
     img: '/earphones.png',
     digitalContent: {
       title: 'Earphone Vendor Contacts',
@@ -87,7 +87,7 @@ export const products: Product[] = [
     name: 'PHONE VENDOR',
     price: 1499,
     originalPrice: 3000,
-    stripePriceId: 'price_REPLACE_WITH_STRIPE_PRICE_ID',
+    stripePriceId: 'price_1SzuYKD9nz8MARc2VWHqkHMP',
     img: '/phone.png',
     digitalContent: {
       title: 'Phone Vendor Contacts',
@@ -103,7 +103,7 @@ export const products: Product[] = [
     name: 'SNEAKER VENDOR',
     price: 1499,
     originalPrice: 3000,
-    stripePriceId: 'price_REPLACE_WITH_STRIPE_PRICE_ID',
+    stripePriceId: 'price_1SzuYXD9nz8MARc2XON7E1wM',
     img: '/sneakers.png',
     digitalContent: {
       title: 'Sneaker Vendor Contacts',
