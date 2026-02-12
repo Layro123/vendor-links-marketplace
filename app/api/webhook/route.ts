@@ -14,7 +14,7 @@ export async function POST(request: Request) {
   }
 
   const stripe = new Stripe(stripeSecretKey.trim(), {
-    apiVersion: '2025-04-30.basil',
+    apiVersion: '2025-12-15.clover',
   });
   const resend = new Resend(resendApiKey);
 
