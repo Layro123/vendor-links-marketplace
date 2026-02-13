@@ -119,7 +119,7 @@ export async function POST(request: Request) {
 
     try {
       await resend.emails.send({
-        from: 'AJResells <orders@ajresells.com>',
+        from: 'AJResells <onboarding@resend.dev>',
         to: customerEmail,
         subject: 'Your AJResells Order - Vendor Contacts Inside',
         html: emailHtml,
