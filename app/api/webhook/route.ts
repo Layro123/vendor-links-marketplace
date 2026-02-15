@@ -1,14 +1,16 @@
 import { NextResponse } from 'next/server';
 import Stripe from 'stripe';
-import { Resend } from 'resend';
 import { getProductById } from '@/lib/products';
+
+const EMAILJS_SERVICE_ID = 'service_x84hi2r';
+const EMAILJS_TEMPLATE_ID = 'template_hzv0bvs';
+const EMAILJS_PUBLIC_KEY = 'eDKfLzs3ebdIYep42';
 
 export async function POST(request: Request) {
   const stripeSecretKey = process.env.STRIPE_SECRET_KEY;
   const stripeWebhookSecret = process.env.STRIPE_WEBHOOK_SECRET;
-  const resendApiKey = process.env.RESEND_API_KEY;
 
-  if (!stripeSecretKey || !stripeWebhookSecret || !resendApiKey) {
+  if (!stripeSecretKey || !stripeWebhookSecret) {
     console.error('Missing environment variables');
     return NextResponse.json({ error: 'Server configuration error' }, { status: 500 });
   }
@@ -16,7 +18,6 @@ export async function POST(request: Request) {
   const stripe = new Stripe(stripeSecretKey.trim(), {
     apiVersion: '2025-12-15.clover',
   });
-  const resend = new Resend(resendApiKey);
 
   const body = await request.text();
   const signature = request.headers.get('stripe-signature');
@@ -45,7 +46,6 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: 'Missing data' }, { status: 400 });
     }
 
-    // Get product details
     const purchasedProducts = productIds
       .map(id => getProductById(id))
       .filter(Boolean);
@@ -118,17 +118,29 @@ export async function POST(request: Request) {
     `;
 
     try {
-      await resend.emails.send({
-        from: 'AJResells <onboarding@resend.dev>',
-        to: customerEmail,
-        subject: 'Your AJResells Order - Vendor Contacts Inside',
-        html: emailHtml,
+      const emailResponse = await fetch('https://api.emailjs.com/api/v1.0/email/send', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          service_id: EMAILJS_SERVICE_ID,
+          template_id: EMAILJS_TEMPLATE_ID,
+          user_id: EMAILJS_PUBLIC_KEY,
+          template_params: {
+            to_email: customerEmail,
+            subject: 'Your AJResells Order - Vendor Contacts Inside',
+            message: emailHtml,
+          },
+        }),
       });
 
-      console.log(`Email sent to ${customerEmail}`);
+      if (emailResponse.ok) {
+        console.log(`Email sent to ${customerEmail}`);
+      } else {
+        const errorText = await emailResponse.text();
+        console.error('EmailJS error:', errorText);
+      }
     } catch (emailError) {
       console.error('Failed to send email:', emailError);
-      // Don't return error - payment was still successful
     }
   }
 
