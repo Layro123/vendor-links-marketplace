@@ -7,8 +7,8 @@ const EMAILJS_TEMPLATE_ID = 'template_hzv0bvs';
 const EMAILJS_PUBLIC_KEY = 'eDKfLzs3ebdIYep42';
 
 export async function POST(request: Request) {
-  const stripeSecretKey = process.env.STRIPE_SECRET_KEY;
-  const stripeWebhookSecret = process.env.STRIPE_WEBHOOK_SECRET;
+  const stripeSecretKey = process.env.STRIPE_SECRET_KEY?.trim();
+  const stripeWebhookSecret = process.env.STRIPE_WEBHOOK_SECRET?.trim();
 
   if (!stripeSecretKey || !stripeWebhookSecret) {
     console.error('Missing environment variables');
