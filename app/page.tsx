@@ -488,7 +488,7 @@ export default function Home() {
               <a href="/refund" className="hover:text-white transition-colors">Refund Policy</a>
             </div>
             <p>&copy; 2025 AJResells. All rights reserved.</p>
-            <p className="mt-2">Powered by Webio</p>
+            <p className="mt-2">Powered by <a href="https://webio-omega.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-[#26FF00] transition-colors underline">Webio</a></p>
           </div>
         </div>
       </footer>
