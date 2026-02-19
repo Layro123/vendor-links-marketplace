@@ -233,7 +233,6 @@ export default function Home() {
           <div className="hidden md:flex gap-8 text-sm font-medium">
             <a href="#top" className="hover:text-gray-300 transition-colors">Home</a>
             <a href="#products" className="hover:text-gray-300 transition-colors">Catalog</a>
-            <a href="#footer" className="hover:text-gray-300 transition-colors">Contact</a>
             <a href="#products" className="hover:text-gray-300 transition-colors">All Suppliers</a>
           </div>
           <button
