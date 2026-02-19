@@ -57,25 +57,10 @@ export async function POST(request: Request) {
 
     // Build email HTML
     const productSections = purchasedProducts.map(product => {
-      const contactsHtml = product!.digitalContent.contacts
-        .map(c => `
-          <div style="background: #1a1a1a; padding: 16px; border-radius: 8px; margin-bottom: 12px;">
-            <div style="color: #26FF00; font-size: 12px; text-transform: uppercase; margin-bottom: 4px;">${c.platform}</div>
-            <div style="color: white; font-size: 18px; font-family: monospace;">${c.contact}</div>
-            ${c.notes ? `<div style="color: #888; font-size: 14px; margin-top: 8px;">${c.notes}</div>` : ''}
-          </div>
-        `)
-        .join('');
-
       return `
-        <div style="background: #0a0a0a; border: 1px solid #333; border-radius: 12px; padding: 24px; margin-bottom: 24px;">
+        <div style="background: #0a0a0a; border: 1px solid #333; border-radius: 12px; padding: 24px; margin-bottom: 24px; text-align: center;">
           <h2 style="color: white; margin: 0 0 20px 0; font-size: 20px;">${product!.digitalContent.title}</h2>
-          ${contactsHtml}
-          ${product!.digitalContent.additionalInfo ? `
-            <div style="background: #111; padding: 16px; border-radius: 8px; margin-top: 16px;">
-              <p style="color: #ccc; margin: 0; font-size: 14px;">${product!.digitalContent.additionalInfo}</p>
-            </div>
-          ` : ''}
+          <a href="${product!.digitalContent.link}" style="display: inline-block; background: #26FF00; color: black; padding: 14px 32px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 16px;">Access Vendor Info</a>
         </div>
       `;
     }).join('');

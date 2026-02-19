@@ -7,12 +7,7 @@ export interface Product {
   img: string;
   digitalContent: {
     title: string;
-    contacts: Array<{
-      platform: string;
-      contact: string;
-      notes?: string;
-    }>;
-    additionalInfo?: string;
+    link: string;
   };
 }
 
@@ -26,12 +21,7 @@ export const products: Product[] = [
     img: '/all-vendors-bundle.png',
     digitalContent: {
       title: 'All Vendors Bundle - Complete Access',
-      contacts: [
-        { platform: 'WhatsApp', contact: '+1 XXX XXX XXXX', notes: 'Main supplier contact' },
-        { platform: 'WeChat', contact: 'vendor_id_here', notes: 'Alternative contact' },
-        { platform: 'Email', contact: 'supplier@example.com' },
-      ],
-      additionalInfo: 'This bundle includes access to all vendor categories. Contact suppliers directly via the provided channels.',
+      link: 'https://docs.google.com/document/d/1QzYURpEe_YwEhHOxxxsSYhVtU0p2OkOz5LFzD16ZyWc/edit?usp=sharing',
     },
   },
   {
@@ -43,11 +33,7 @@ export const products: Product[] = [
     img: '/cologne.png',
     digitalContent: {
       title: 'Cologne Vendor Contacts',
-      contacts: [
-        { platform: 'WhatsApp', contact: '+1 XXX XXX XXXX', notes: 'Cologne supplier' },
-        { platform: 'Email', contact: 'cologne@example.com' },
-      ],
-      additionalInfo: 'Premium cologne suppliers with competitive wholesale pricing.',
+      link: 'https://docs.google.com/document/d/1px1TVh0OAoXSYUvFDazJhHk8oZ-BdAvRVNM8Uxe6aYU/edit?usp=sharing',
     },
   },
   {
@@ -59,11 +45,7 @@ export const products: Product[] = [
     img: '/designer-bags.png',
     digitalContent: {
       title: 'Designer Bag Supplier Contacts',
-      contacts: [
-        { platform: 'WhatsApp', contact: '+1 XXX XXX XXXX', notes: 'Bag supplier' },
-        { platform: 'WeChat', contact: 'bags_vendor', notes: 'Primary contact' },
-      ],
-      additionalInfo: 'High-quality designer bag suppliers.',
+      link: 'https://docs.google.com/document/d/1x7jFVSTC5jRADE-NADy2DSicJ_Fx_NFxFKEMRcavuSA/edit?usp=sharing',
     },
   },
   {
@@ -75,11 +57,7 @@ export const products: Product[] = [
     img: '/earphones.png',
     digitalContent: {
       title: 'Earphone Vendor Contacts',
-      contacts: [
-        { platform: 'WhatsApp', contact: '+1 XXX XXX XXXX', notes: 'Earphone supplier' },
-        { platform: 'Email', contact: 'earphones@example.com' },
-      ],
-      additionalInfo: 'Premium earphone and audio accessory suppliers.',
+      link: 'https://docs.google.com/document/d/1Nucmmw77UycaHasFW0mc1hpEB3XX3NVSI4mf64x3cgk/edit?usp=sharing',
     },
   },
   {
@@ -91,11 +69,7 @@ export const products: Product[] = [
     img: '/phone.png',
     digitalContent: {
       title: 'Phone Vendor Contacts',
-      contacts: [
-        { platform: 'WhatsApp', contact: '+1 XXX XXX XXXX', notes: 'Phone supplier' },
-        { platform: 'WeChat', contact: 'phone_vendor' },
-      ],
-      additionalInfo: 'Mobile phone and accessories suppliers.',
+      link: 'https://docs.google.com/document/d/1WWfan0GTc-0ZRCgqXmUuMcfV-zI4MoS_cm9eFijbTv4/edit?usp=sharing',
     },
   },
   {
@@ -107,11 +81,7 @@ export const products: Product[] = [
     img: '/sneakers.png',
     digitalContent: {
       title: 'Sneaker Vendor Contacts',
-      contacts: [
-        { platform: 'WhatsApp', contact: '+1 XXX XXX XXXX', notes: 'Sneaker supplier' },
-        { platform: 'WeChat', contact: 'sneakers_vendor' },
-      ],
-      additionalInfo: 'Premium sneaker suppliers with latest releases.',
+      link: 'https://docs.google.com/document/d/1RZcXjsZCJL7QYY0HB0Gqf0rY0t_7PS6FNE8MCqh5FDQ/edit?usp=sharing',
     },
   },
 ];
