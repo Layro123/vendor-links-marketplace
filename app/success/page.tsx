@@ -39,7 +39,9 @@ function SuccessContent() {
           <h2 className="text-xl font-semibold mb-2">Check Your Inbox</h2>
           <p className="text-gray-400">
             We&apos;ve sent your vendor contact details to the email you used at checkout.
-            If you don&apos;t see it, check your spam folder.
+            It may take a few minutes to arrive. If you don&apos;t see it in your inbox,
+            please check your spam or junk folder and mark it as &quot;Not Spam&quot; so you
+            don&apos;t miss future emails from us.
           </p>
         </div>
 
